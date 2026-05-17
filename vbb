@@ -1,0 +1,1896 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Via Bebê – Loja Infantil em Planaltina DF | Enxoval, Roupas e Acessórios para Bebê</title>
+  <meta name="description" content="Via Bebê é a loja infantil completa em Planaltina-DF. Encontre enxoval, roupinhas, mamadeiras, carrinhos e muito mais para o seu bebê. Atendimento pelo WhatsApp!" />
+  <meta name="keywords" content="loja de bebê Planaltina DF, enxoval de bebê Planaltina, roupas infantis Planaltina, loja infantil DF, Via Bebê" />
+  <meta property="og:title" content="Via Bebê – Loja Infantil em Planaltina DF" />
+  <meta property="og:description" content="Tudo para o seu bebê em um só lugar. Enxoval, roupinhas, acessórios e muito mais em Planaltina-DF." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --cream: #fdf9f5;
+      --blush: #f7e8e3;
+      --rose: #e8b4b8;
+      --rose-deep: #c9848a;
+      --rose-text: #9e5a62;
+      --sky: #dceef7;
+      --sky-mid: #a8d4e9;
+      --sky-deep: #6aa8c9;
+      --sage: #d4e6d4;
+      --sand: #f0e6d8;
+      --sand-mid: #d4b896;
+      --brown-soft: #8c6e56;
+      --white: #ffffff;
+      --text-dark: #3a2e28;
+      --text-mid: #7a6456;
+      --text-light: #b09a8c;
+      --shadow-sm: 0 2px 12px rgba(180,130,110,0.10);
+      --shadow-md: 0 8px 32px rgba(180,130,110,0.14);
+      --shadow-lg: 0 20px 60px rgba(180,130,110,0.18);
+      --radius-sm: 12px;
+      --radius-md: 20px;
+      --radius-lg: 32px;
+      --radius-xl: 48px;
+      --whatsapp: #25D366;
+      --whatsapp-dark: #1da851;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--cream);
+      color: var(--text-dark);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── SCROLL ANIMATIONS ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s cubic-bezier(.22,.68,0,1.2), transform 0.7s cubic-bezier(.22,.68,0,1.2);
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+
+    /* ── HEADER ── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(253,249,245,0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(232,180,184,0.25);
+      transition: box-shadow 0.3s;
+    }
+    header.scrolled { box-shadow: var(--shadow-sm); }
+
+    .header-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--rose), var(--sky-mid));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+    .logo-via {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      color: var(--text-light);
+      text-transform: uppercase;
+    }
+    .logo-bebe {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--rose-text);
+      letter-spacing: 0.02em;
+    }
+
+    /* Search */
+    .search-wrap {
+      flex: 1;
+      max-width: 420px;
+      position: relative;
+    }
+    .search-input {
+      width: 100%;
+      padding: 10px 16px 10px 40px;
+      background: var(--sand);
+      border: 1.5px solid transparent;
+      border-radius: 999px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--text-dark);
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .search-input::placeholder { color: var(--text-light); }
+    .search-input:focus { background: var(--white); border-color: var(--rose); }
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-light);
+      pointer-events: none;
+      font-size: 15px;
+    }
+    .search-results-dropdown {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      right: 0;
+      background: var(--white);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      max-height: 360px;
+      overflow-y: auto;
+      z-index: 2000;
+      display: none;
+    }
+    .search-results-dropdown.active { display: block; }
+    .search-result-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      cursor: pointer;
+      transition: background 0.15s;
+      border-bottom: 1px solid var(--sand);
+    }
+    .search-result-item:last-child { border-bottom: none; }
+    .search-result-item:hover { background: var(--cream); }
+    .search-result-img {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-sm);
+      object-fit: cover;
+      background: var(--sand);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .search-result-name { font-size: 13px; font-weight: 500; color: var(--text-dark); }
+    .search-result-price { font-size: 12px; color: var(--rose-text); font-weight: 600; margin-top: 2px; }
+
+    /* Nav */
+    nav.desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-left: auto;
+    }
+    nav.desktop-nav a {
+      padding: 8px 14px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-mid);
+      text-decoration: none;
+      border-radius: 999px;
+      transition: background 0.2s, color 0.2s;
+    }
+    nav.desktop-nav a:hover { background: var(--blush); color: var(--rose-text); }
+
+    .btn-whatsapp-header {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 18px;
+      background: var(--whatsapp);
+      color: white;
+      border: none;
+      border-radius: 999px;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      flex-shrink: 0;
+    }
+    .btn-whatsapp-header:hover { background: var(--whatsapp-dark); transform: scale(1.04); }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      margin-left: auto;
+      background: none;
+      border: none;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--rose-text);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Mobile menu */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      top: 72px;
+      background: rgba(253,249,245,0.98);
+      z-index: 999;
+      padding: 32px 24px;
+      flex-direction: column;
+      gap: 4px;
+      overflow-y: auto;
+      transform: translateX(100%);
+      transition: transform 0.35s cubic-bezier(.22,.68,0,1.2);
+    }
+    .mobile-menu.open { transform: translateX(0); }
+    .mobile-menu a {
+      display: block;
+      padding: 16px 20px;
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--text-dark);
+      text-decoration: none;
+      border-radius: var(--radius-md);
+      transition: background 0.2s;
+    }
+    .mobile-menu a:hover { background: var(--blush); color: var(--rose-text); }
+    .mobile-menu-cats { margin-top: 16px; }
+    .mobile-menu-cats-title {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      padding: 8px 20px 4px;
+    }
+    .mobile-menu-wa {
+      margin-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px;
+      background: var(--whatsapp);
+      color: white;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--blush) 0%, var(--cream) 45%, var(--sky) 100%);
+      padding: 80px 24px 60px;
+    }
+
+    .hero-bg-orbs {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.45;
+    }
+    .orb-1 { width: 500px; height: 500px; background: var(--rose); top: -120px; left: -100px; animation: floatOrb 8s ease-in-out infinite; }
+    .orb-2 { width: 380px; height: 380px; background: var(--sky-mid); bottom: -80px; right: -60px; animation: floatOrb 10s ease-in-out infinite reverse; }
+    .orb-3 { width: 260px; height: 260px; background: var(--sage); top: 30%; left: 40%; animation: floatOrb 12s ease-in-out infinite 2s; }
+
+    @keyframes floatOrb {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(20px, -30px) scale(1.05); }
+      66% { transform: translate(-15px, 20px) scale(0.97); }
+    }
+
+    .hero-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 16px;
+      background: white;
+      border-radius: 999px;
+      box-shadow: var(--shadow-sm);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--rose-text);
+      margin-bottom: 24px;
+      width: fit-content;
+    }
+    .hero-badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--whatsapp);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.5); opacity: 0.6; }
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(38px, 6vw, 68px);
+      font-weight: 500;
+      line-height: 1.1;
+      color: var(--text-dark);
+      margin-bottom: 20px;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: var(--rose-text);
+    }
+
+    .hero-sub {
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--text-mid);
+      max-width: 440px;
+      margin-bottom: 36px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: var(--rose-text);
+      color: white;
+      border: none;
+      border-radius: 999px;
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(158,90,98,0.3);
+    }
+    .btn-primary:hover { background: #8a4a52; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(158,90,98,0.38); }
+
+    .btn-whatsapp-large {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: var(--whatsapp);
+      color: white;
+      border: none;
+      border-radius: 999px;
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+    }
+    .btn-whatsapp-large:hover { background: var(--whatsapp-dark); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(37,211,102,0.38); }
+
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      margin-top: 44px;
+    }
+    .hero-stat { }
+    .hero-stat-num {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--rose-text);
+    }
+    .hero-stat-label {
+      font-size: 12px;
+      color: var(--text-light);
+      font-weight: 500;
+    }
+
+    /* Hero visual */
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero-card-stack {
+      position: relative;
+      width: 360px;
+      height: 420px;
+    }
+    .hero-card {
+      position: absolute;
+      background: white;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 80px;
+    }
+    .hero-card-main {
+      width: 280px;
+      height: 340px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(145deg, var(--blush), var(--sky));
+      z-index: 3;
+      animation: heroCardFloat 6s ease-in-out infinite;
+    }
+    @keyframes heroCardFloat {
+      0%, 100% { transform: translate(-50%, -50%) rotate(-2deg); }
+      50% { transform: translate(-50%, -54%) rotate(1deg); }
+    }
+    .hero-card-bg1 {
+      width: 220px;
+      height: 260px;
+      top: 10px;
+      right: 10px;
+      background: linear-gradient(145deg, var(--sky), var(--sage));
+      z-index: 2;
+      transform: rotate(8deg);
+      font-size: 60px;
+    }
+    .hero-card-bg2 {
+      width: 200px;
+      height: 240px;
+      bottom: 10px;
+      left: 10px;
+      background: linear-gradient(145deg, var(--sand), var(--rose));
+      z-index: 1;
+      transform: rotate(-10deg);
+      font-size: 55px;
+    }
+
+    .hero-floating-tag {
+      position: absolute;
+      background: white;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-md);
+      padding: 10px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-dark);
+      z-index: 10;
+      white-space: nowrap;
+    }
+    .hero-floating-tag.tag-1 {
+      top: 10%;
+      right: -10px;
+      animation: tagFloat 5s ease-in-out infinite;
+    }
+    .hero-floating-tag.tag-2 {
+      bottom: 15%;
+      left: -20px;
+      animation: tagFloat 7s ease-in-out infinite reverse;
+    }
+    @keyframes tagFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* ── SECTION COMMON ── */
+    section { padding: 80px 24px; }
+    .section-inner { max-width: 1280px; margin: 0 auto; }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+    .section-tag {
+      display: inline-block;
+      padding: 5px 16px;
+      background: var(--blush);
+      color: var(--rose-text);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 500;
+      color: var(--text-dark);
+      line-height: 1.15;
+    }
+    .section-title em { font-style: italic; color: var(--rose-text); }
+    .section-sub {
+      font-size: 16px;
+      color: var(--text-mid);
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+
+    /* ── PROMO BANNER ── */
+    .promo-section { background: var(--blush); padding: 0; }
+    .promo-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 56px 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .promo-card {
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      min-height: 280px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .promo-card:hover { transform: scale(1.02); }
+    .promo-card-1 { background: linear-gradient(135deg, #e8c4d4 0%, #f0d8e4 100%); }
+    .promo-card-2 { background: linear-gradient(135deg, #c4dce8 0%, #d8eef8 100%); }
+    .promo-emoji {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      font-size: 100px;
+      opacity: 0.25;
+      transform: rotate(-15deg);
+    }
+    .promo-tag-pill {
+      display: inline-block;
+      padding: 5px 14px;
+      background: white;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--rose-text);
+      margin-bottom: 12px;
+      width: fit-content;
+    }
+    .promo-card-title {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--text-dark);
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .promo-card-sub { font-size: 14px; color: var(--text-mid); margin-bottom: 20px; }
+    .btn-outline-rose {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border: 2px solid var(--rose-text);
+      color: var(--rose-text);
+      background: white;
+      border-radius: 999px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      width: fit-content;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-outline-rose:hover { background: var(--rose-text); color: white; }
+
+    /* ── CATEGORIES ── */
+    .categories-section { background: var(--cream); }
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 16px;
+    }
+    .cat-card {
+      background: white;
+      border-radius: var(--radius-md);
+      padding: 24px 16px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.25s, box-shadow 0.25s, background 0.25s;
+      box-shadow: var(--shadow-sm);
+      text-decoration: none;
+      display: block;
+    }
+    .cat-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      background: var(--blush);
+    }
+    .cat-icon { font-size: 36px; margin-bottom: 12px; display: block; }
+    .cat-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+    .cat-count {
+      font-size: 11px;
+      color: var(--text-light);
+      margin-top: 4px;
+    }
+
+    /* ── PRODUCTS GRID ── */
+    .products-section { background: var(--sand); }
+    .products-filter-bar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+    .filter-btn {
+      padding: 8px 20px;
+      border: 1.5px solid var(--rose);
+      background: white;
+      border-radius: 999px;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-mid);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--rose-text);
+      border-color: var(--rose-text);
+      color: white;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    /* Product card */
+    .product-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      position: relative;
+    }
+    .product-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-md); }
+
+    .product-img-wrap {
+      position: relative;
+      height: 240px;
+      overflow: hidden;
+      background: var(--sand);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 80px;
+    }
+    .product-img-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background: linear-gradient(to top, rgba(255,255,255,0.5), transparent);
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      padding: 4px 12px;
+      background: var(--rose-text);
+      color: white;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      z-index: 2;
+    }
+    .product-badge.promo { background: #e07a3a; }
+    .product-badge.novo { background: var(--sky-deep); }
+
+    .product-info { padding: 20px; }
+    .product-cat {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 6px;
+    }
+    .product-name {
+      font-family: var(--font-display);
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text-dark);
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+    .product-desc {
+      font-size: 13px;
+      color: var(--text-mid);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+    .product-price-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .product-price {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--rose-text);
+    }
+    .product-price-old {
+      font-size: 14px;
+      color: var(--text-light);
+      text-decoration: line-through;
+    }
+    .btn-wa-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 12px;
+      background: var(--whatsapp);
+      color: white;
+      border: none;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-wa-card:hover { background: var(--whatsapp-dark); transform: scale(1.02); }
+
+    /* ── DIFERENCIAIS ── */
+    .diferenciais-section { background: var(--cream); }
+    .diferenciais-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 24px;
+    }
+    .diferencial-card {
+      background: white;
+      border-radius: var(--radius-md);
+      padding: 32px 24px;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .diferencial-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .diferencial-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      margin-bottom: 18px;
+    }
+    .diferencial-icon.rose { background: var(--blush); }
+    .diferencial-icon.sky { background: var(--sky); }
+    .diferencial-icon.sage { background: var(--sage); }
+    .diferencial-icon.sand { background: var(--sand); }
+    .diferencial-title {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+    .diferencial-desc { font-size: 14px; color: var(--text-mid); line-height: 1.55; }
+
+    /* ── DEPOIMENTOS ── */
+    .depoimentos-section { background: var(--blush); }
+    .depoimentos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .depoimento-card {
+      background: white;
+      border-radius: var(--radius-md);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+    }
+    .stars { color: #f59e0b; font-size: 16px; margin-bottom: 14px; letter-spacing: 2px; }
+    .depoimento-text {
+      font-size: 15px;
+      color: var(--text-mid);
+      line-height: 1.65;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+    .depoimento-autor {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .depoimento-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      background: var(--sand);
+    }
+    .depoimento-nome { font-size: 14px; font-weight: 600; color: var(--text-dark); }
+    .depoimento-local { font-size: 12px; color: var(--text-light); }
+
+    /* ── CTA WHATSAPP ── */
+    .cta-section {
+      background: linear-gradient(135deg, var(--rose-text) 0%, #7a3a42 100%);
+      color: white;
+      text-align: center;
+      padding: 80px 24px;
+    }
+    .cta-inner { max-width: 600px; margin: 0 auto; }
+    .cta-emoji { font-size: 56px; margin-bottom: 20px; display: block; }
+    .cta-title {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 500;
+      margin-bottom: 14px;
+      line-height: 1.15;
+    }
+    .cta-sub { font-size: 16px; opacity: 0.85; margin-bottom: 32px; line-height: 1.6; }
+    .btn-wa-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 36px;
+      background: var(--whatsapp);
+      color: white;
+      border: none;
+      border-radius: 999px;
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 8px 28px rgba(37,211,102,0.4);
+    }
+    .btn-wa-cta:hover { background: var(--whatsapp-dark); transform: scale(1.05); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--text-dark);
+      color: rgba(255,255,255,0.8);
+      padding: 64px 24px 32px;
+    }
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .footer-brand .logo-via { color: rgba(255,255,255,0.5); }
+    .footer-brand .logo-bebe { color: var(--rose); }
+    .footer-desc {
+      font-size: 14px;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.55);
+      margin-top: 16px;
+      max-width: 260px;
+    }
+    .footer-wa-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 20px;
+      background: var(--whatsapp);
+      color: white;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 20px;
+      width: fit-content;
+      transition: background 0.2s;
+    }
+    .footer-wa-btn:hover { background: var(--whatsapp-dark); }
+    .footer-col-title {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 20px;
+    }
+    .footer-col a {
+      display: block;
+      font-size: 14px;
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      margin-bottom: 10px;
+      transition: color 0.2s;
+    }
+    .footer-col a:hover { color: white; }
+    .footer-col p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+    .footer-bottom {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: rgba(255,255,255,0.35);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* ── FLOATING WA BUTTON ── */
+    .floating-wa {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 60px;
+      height: 60px;
+      background: var(--whatsapp);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 24px rgba(37,211,102,0.5);
+      z-index: 2000;
+      text-decoration: none;
+      transition: transform 0.25s, box-shadow 0.25s;
+      animation: waPop 0.5s 1.5s cubic-bezier(.22,.68,0,1.5) both;
+    }
+    .floating-wa:hover { transform: scale(1.12); box-shadow: 0 12px 36px rgba(37,211,102,0.6); }
+    @keyframes waPop {
+      from { transform: scale(0); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    .floating-wa svg { width: 30px; height: 30px; fill: white; }
+    .floating-wa-pulse {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: var(--whatsapp);
+      animation: waPulse 2.5s ease-out infinite;
+      z-index: -1;
+    }
+    @keyframes waPulse {
+      0% { transform: scale(1); opacity: 0.6; }
+      100% { transform: scale(1.9); opacity: 0; }
+    }
+
+    /* ── MODAL PRODUTO ── */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(40,24,18,0.6);
+      z-index: 3000;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+      padding: 0;
+    }
+    .modal-overlay.open { opacity: 1; pointer-events: all; }
+    .modal-content {
+      background: white;
+      border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+      max-width: 640px;
+      width: 100%;
+      max-height: 92vh;
+      overflow-y: auto;
+      padding: 40px 32px 40px;
+      transform: translateY(100%);
+      transition: transform 0.4s cubic-bezier(.22,.68,0,1.2);
+      position: relative;
+    }
+    .modal-overlay.open .modal-content { transform: translateY(0); }
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 36px;
+      height: 36px;
+      background: var(--sand);
+      border: none;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-mid);
+      transition: background 0.2s;
+    }
+    .modal-close:hover { background: var(--blush); }
+    .modal-handle {
+      width: 40px;
+      height: 4px;
+      background: var(--sand-mid);
+      border-radius: 2px;
+      margin: 0 auto 28px;
+    }
+    .modal-emoji { font-size: 72px; text-align: center; display: block; margin-bottom: 20px; }
+    .modal-badge { }
+    .modal-cat {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 8px;
+    }
+    .modal-name {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .modal-desc { font-size: 15px; color: var(--text-mid); line-height: 1.65; margin-bottom: 24px; }
+    .modal-price-row { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; }
+    .modal-price {
+      font-family: var(--font-display);
+      font-size: 30px;
+      font-weight: 600;
+      color: var(--rose-text);
+    }
+    .modal-price-old {
+      font-size: 16px;
+      color: var(--text-light);
+      text-decoration: line-through;
+    }
+    .btn-wa-modal {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 16px;
+      background: var(--whatsapp);
+      color: white;
+      border: none;
+      border-radius: var(--radius-md);
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+    }
+    .btn-wa-modal:hover { background: var(--whatsapp-dark); transform: scale(1.02); }
+
+    /* ── NOVIDADES STRIP ── */
+    .novidades-section { background: var(--sky); }
+    .novidades-scroll {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .novidades-scroll::-webkit-scrollbar { height: 4px; }
+    .novidades-scroll::-webkit-scrollbar-track { background: rgba(0,0,0,0.05); border-radius: 2px; }
+    .novidades-scroll::-webkit-scrollbar-thumb { background: var(--sky-mid); border-radius: 2px; }
+    .novidade-card {
+      flex-shrink: 0;
+      width: 200px;
+      background: white;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      scroll-snap-align: start;
+      cursor: pointer;
+      transition: transform 0.25s;
+    }
+    .novidade-card:hover { transform: scale(1.04); }
+    .novidade-img {
+      height: 150px;
+      background: var(--sand);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 56px;
+    }
+    .novidade-info { padding: 14px; }
+    .novidade-name { font-size: 13px; font-weight: 600; color: var(--text-dark); margin-bottom: 4px; }
+    .novidade-price { font-size: 14px; color: var(--rose-text); font-weight: 700; }
+
+    /* ── MAIS VENDIDOS ── */
+    .mais-vendidos-section { background: var(--cream); }
+    .mais-vendidos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .mv-card {
+      background: white;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      transition: transform 0.25s, box-shadow 0.25s;
+      position: relative;
+    }
+    .mv-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+    .mv-rank {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 28px;
+      height: 28px;
+      background: var(--rose-text);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      z-index: 2;
+    }
+    .mv-img {
+      height: 160px;
+      background: var(--sand);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 58px;
+    }
+    .mv-info { padding: 14px; }
+    .mv-name { font-size: 13px; font-weight: 600; color: var(--text-dark); margin-bottom: 6px; }
+    .mv-price { font-size: 15px; color: var(--rose-text); font-weight: 700; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .hero-visual { display: none; }
+      .hero-ctas { flex-direction: column; }
+      .promo-inner { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+
+    @media (max-width: 640px) {
+      .search-wrap { display: none; }
+      nav.desktop-nav { display: none; }
+      .btn-whatsapp-header { display: none; }
+      .hamburger { display: flex; }
+      .mobile-menu { display: flex; }
+      .hero { padding: 48px 20px 48px; min-height: 80vh; }
+      section { padding: 56px 20px; }
+      .categories-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+      .cat-card { padding: 18px 10px; }
+      .cat-icon { font-size: 28px; margin-bottom: 8px; }
+      .products-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+      .product-img-wrap { height: 180px; font-size: 58px; }
+      .product-name { font-size: 15px; }
+      .product-info { padding: 14px; }
+      .diferenciais-grid { grid-template-columns: 1fr 1fr; }
+      .depoimentos-grid { grid-template-columns: 1fr; }
+      .mais-vendidos-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-inner { grid-template-columns: 1fr; gap: 24px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .hero-stats { gap: 20px; }
+      .modal-content { padding: 32px 20px 32px; border-radius: var(--radius-lg) var(--radius-lg) 0 0; }
+      .modal-name { font-size: 22px; }
+      .floating-wa { bottom: 20px; right: 20px; }
+    }
+
+    /* Loading shimmer */
+    @keyframes shimmer {
+      0% { background-position: -400px 0; }
+      100% { background-position: 400px 0; }
+    }
+    .shimmer {
+      background: linear-gradient(90deg, var(--sand) 0px, var(--blush) 80px, var(--sand) 160px);
+      background-size: 400px;
+      animation: shimmer 1.4s infinite linear;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="header-inner">
+    <a class="logo" href="#home">
+      <div class="logo-icon">👶</div>
+      <div class="logo-text">
+        <span class="logo-via">Loja</span>
+        <span class="logo-bebe">Via Bebê</span>
+      </div>
+    </a>
+
+    <div class="search-wrap" style="display:none" id="searchWrapDesktop">
+      <span class="search-icon">🔍</span>
+      <input class="search-input" type="text" id="searchInputDesktop" placeholder="Buscar produtos..." autocomplete="off" />
+      <div class="search-results-dropdown" id="searchDropdownDesktop"></div>
+    </div>
+
+    <nav class="desktop-nav">
+      <a href="#home">Início</a>
+      <a href="#categorias">Categorias</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#sobre">Sobre nós</a>
+    </nav>
+
+    <a class="btn-whatsapp-header" href="#" id="headerWaBtn">
+      <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.555 4.126 1.524 5.859L.057 23.571l5.886-1.462A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 0 1-5.003-1.368l-.36-.214-3.713.973.992-3.623-.235-.373A9.79 9.79 0 0 1 2.182 12C2.182 6.573 6.573 2.182 12 2.182c5.426 0 9.818 4.391 9.818 9.818 0 5.426-4.392 9.818-9.818 9.818z"/></svg>
+      WhatsApp
+    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" onclick="closeMobileMenu()">🏠 Início</a>
+  <a href="#categorias" onclick="closeMobileMenu()">🗂️ Categorias</a>
+  <a href="#produtos" onclick="closeMobileMenu()">🛍️ Produtos</a>
+  <a href="#novidades" onclick="closeMobileMenu()">✨ Novidades</a>
+  <a href="#mais-vendidos" onclick="closeMobileMenu()">⭐ Mais Vendidos</a>
+  <a href="#sobre" onclick="closeMobileMenu()">💛 Sobre nós</a>
+  <div class="mobile-menu-cats">
+    <div class="mobile-menu-cats-title">Categorias</div>
+    <a href="#" onclick="filterByCategory('Enxoval'); closeMobileMenu()">🍼 Enxoval</a>
+    <a href="#" onclick="filterByCategory('Roupinhas'); closeMobileMenu()">👗 Roupinhas</a>
+    <a href="#" onclick="filterByCategory('Mamadeiras'); closeMobileMenu()">🍶 Mamadeiras</a>
+    <a href="#" onclick="filterByCategory('Carrinhos'); closeMobileMenu()">🛒 Carrinhos</a>
+    <a href="#" onclick="filterByCategory('Brinquedos'); closeMobileMenu()">🧸 Brinquedos</a>
+    <a href="#" onclick="filterByCategory('Banho'); closeMobileMenu()">🛁 Banho</a>
+    <a href="#" onclick="filterByCategory('Higiene'); closeMobileMenu()">🧴 Higiene</a>
+    <a href="#" onclick="filterByCategory('Acessórios'); closeMobileMenu()">💼 Acessórios</a>
+  </div>
+  <a class="mobile-menu-wa" href="#" id="mobileMenuWa">
+    <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.555 4.126 1.524 5.859L.057 23.571l5.886-1.462A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 0 1-5.003-1.368l-.36-.214-3.713.973.992-3.623-.235-.373A9.79 9.79 0 0 1 2.182 12C2.182 6.573 6.573 2.182 12 2.182c5.426 0 9.818 4.391 9.818 9.818 0 5.426-4.392 9.818-9.818 9.818z"/></svg>
+    Chamar no WhatsApp
+  </a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="hero-badge-dot"></span>
+        Loja física em Planaltina – DF
+      </div>
+      <h1 class="hero-title reveal reveal-delay-1">
+        Tudo para seu<br/>
+        <em>bebê</em> em<br/>
+        um só lugar 👶
+      </h1>
+      <p class="hero-sub reveal reveal-delay-2">
+        Enxoval, roupinhas, mamadeiras, carrinhos e muito mais. Qualidade e carinho para os momentos mais especiais da sua família.
+      </p>
+      <div class="hero-ctas reveal reveal-delay-3">
+        <a href="#produtos" class="btn-primary">
+          🛍️ Ver Produtos
+        </a>
+        <a href="#" class="btn-whatsapp-large" id="heroWaBtn">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.555 4.126 1.524 5.859L.057 23.571l5.886-1.462A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 0 1-5.003-1.368l-.36-.214-3.713.973.992-3.623-.235-.373A9.79 9.79 0 0 1 2.182 12C2.182 6.573 6.573 2.182 12 2.182c5.426 0 9.818 4.391 9.818 9.818 0 5.426-4.392 9.818-9.818 9.818z"/></svg>
+          Chamar no WhatsApp
+        </a>
+      </div>
+      <div class="hero-stats reveal reveal-delay-4">
+        <div class="hero-stat">
+          <div class="hero-stat-num">500+</div>
+          <div class="hero-stat-label">Produtos</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">2.000+</div>
+          <div class="hero-stat-label">Famílias atendidas</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">10+</div>
+          <div class="hero-stat-label">Anos de experiência</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual reveal reveal-delay-2">
+      <div class="hero-card-stack">
+        <div class="hero-card hero-card-bg1">🧸</div>
+        <div class="hero-card hero-card-bg2">🍼</div>
+        <div class="hero-card hero-card-main">👶</div>
+        <div class="hero-floating-tag tag-1">✨ Novidades toda semana</div>
+        <div class="hero-floating-tag tag-2">💛 Melhor preço da região</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMOÇÕES -->
+<section class="promo-section">
+  <div class="promo-inner">
+    <div class="promo-card promo-card-1 reveal">
+      <span class="promo-emoji">👗</span>
+      <div class="promo-tag-pill">🔥 Até 40% OFF</div>
+      <div class="promo-card-title">Liquidação de Roupinhas de Verão</div>
+      <div class="promo-card-sub">Aproveite as melhores ofertas em moda infantil</div>
+      <a href="#" class="btn-outline-rose" onclick="filterByCategory('Roupinhas'); document.getElementById('produtos').scrollIntoView({behavior:'smooth'})">Ver Ofertas →</a>
+    </div>
+    <div class="promo-card promo-card-2 reveal reveal-delay-2">
+      <span class="promo-emoji">🛒</span>
+      <div class="promo-tag-pill">🎁 Kit Completo</div>
+      <div class="promo-card-title">Kits Enxoval com Desconto Especial</div>
+      <div class="promo-card-sub">Tudo que o seu bebê precisa em um só kit</div>
+      <a href="#" class="btn-outline-rose" onclick="filterByCategory('Enxoval'); document.getElementById('produtos').scrollIntoView({behavior:'smooth'})">Ver Kits →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIAS -->
+<section class="categories-section" id="categorias">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-tag">Navegue por</div>
+      <h2 class="section-title">Nossas <em>Categorias</em></h2>
+      <p class="section-sub">Encontre exatamente o que você precisa para o seu bebê</p>
+    </div>
+    <div class="categories-grid" id="categoriesGrid">
+      <!-- Populated by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- NOVIDADES -->
+<section class="novidades-section" id="novidades">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-tag" style="background:var(--sky); color:var(--sky-deep)">Acabou de chegar</div>
+      <h2 class="section-title">✨ <em>Novidades</em></h2>
+      <p class="section-sub">Os produtos mais recentes da nossa loja</p>
+    </div>
+    <div class="novidades-scroll" id="novidadesScroll"></div>
+  </div>
+</section>
+
+<!-- MAIS VENDIDOS -->
+<section class="mais-vendidos-section" id="mais-vendidos">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-tag">Favoritos das mamães</div>
+      <h2 class="section-title">⭐ Mais <em>Vendidos</em></h2>
+      <p class="section-sub">Os produtos que as mamães mais amam</p>
+    </div>
+    <div class="mais-vendidos-grid" id="maisVendidosGrid"></div>
+  </div>
+</section>
+
+<!-- PRODUTOS -->
+<section class="products-section" id="produtos">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-tag">Catálogo Completo</div>
+      <h2 class="section-title">Nossos <em>Produtos</em></h2>
+      <p class="section-sub">Clique em qualquer produto para saber mais e falar conosco</p>
+    </div>
+    <div class="products-filter-bar reveal" id="filterBar"></div>
+    <div class="products-grid" id="productsGrid"></div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section class="diferenciais-section" id="sobre">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-tag">Por que escolher</div>
+      <h2 class="section-title">A Via Bebê <em>cuida</em> de você</h2>
+      <p class="section-sub">Mais de 10 anos levando qualidade e carinho às famílias de Planaltina</p>
+    </div>
+    <div class="diferenciais-grid">
+      <div class="diferencial-card reveal">
+        <div class="diferencial-icon rose">💛</div>
+        <div class="diferencial-title">Atendimento Personalizado</div>
+        <div class="diferencial-desc">Nossa equipe está pronta para te ajudar a escolher o melhor para o seu bebê, com carinho e atenção.</div>
+      </div>
+      <div class="diferencial-card reveal reveal-delay-1">
+        <div class="diferencial-icon sky">🏆</div>
+        <div class="diferencial-title">Produtos de Qualidade</div>
+        <div class="diferencial-desc">Selecionamos cuidadosamente cada produto, garantindo segurança e qualidade para a sua família.</div>
+      </div>
+      <div class="diferencial-card reveal reveal-delay-2">
+        <div class="diferencial-icon sage">💰</div>
+        <div class="diferencial-title">Melhor Preço da Região</div>
+        <div class="diferencial-desc">Preços justos e competitivos, porque acreditamos que qualidade não precisa custar caro.</div>
+      </div>
+      <div class="diferencial-card reveal reveal-delay-3">
+        <div class="diferencial-icon sand">📦</div>
+        <div class="diferencial-title">Variedade Incrível</div>
+        <div class="diferencial-desc">Mais de 500 produtos para você encontrar tudo que precisa em um único lugar, na sua cidade.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="depoimentos-section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-tag">O que dizem</div>
+      <h2 class="section-title">Mamães <em>felizes</em> 💛</h2>
+    </div>
+    <div class="depoimentos-grid">
+      <div class="depoimento-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="depoimento-text">"A Via Bebê é incrível! Comprei todo o enxoval da minha filha lá e fui muito bem atendida. Os produtos são de ótima qualidade e o preço é justo. Super indico!"</p>
+        <div class="depoimento-autor">
+          <div class="depoimento-avatar">👩</div>
+          <div>
+            <div class="depoimento-nome">Ana Carolina S.</div>
+            <div class="depoimento-local">Planaltina – DF</div>
+          </div>
+        </div>
+      </div>
+      <div class="depoimento-card reveal reveal-delay-1">
+        <div class="stars">★★★★★</div>
+        <p class="depoimento-text">"Atendimento pelo WhatsApp é maravilhoso! Consegui tirar todas as dúvidas antes de ir à loja. A equipe é super atenciosa e conhece bem os produtos."</p>
+        <div class="depoimento-autor">
+          <div class="depoimento-avatar">👩‍🦱</div>
+          <div>
+            <div class="depoimento-nome">Fernanda M.</div>
+            <div class="depoimento-local">Planaltina – DF</div>
+          </div>
+        </div>
+      </div>
+      <div class="depoimento-card reveal reveal-delay-2">
+        <div class="stars">★★★★★</div>
+        <p class="depoimento-text">"Melhor loja de bebê de Planaltina sem dúvidas! Variedade enorme, preços ótimos e a loja é linda. Recomendo a todas as mamães da região!"</p>
+        <div class="depoimento-autor">
+          <div class="depoimento-avatar">👱‍♀️</div>
+          <div>
+            <div class="depoimento-nome">Juliana R.</div>
+            <div class="depoimento-local">Sobradinho – DF</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA WHATSAPP -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <span class="cta-emoji reveal">💬</span>
+    <h2 class="cta-title reveal reveal-delay-1">Tem alguma dúvida? Fale conosco!</h2>
+    <p class="cta-sub reveal reveal-delay-2">Nossa equipe está pronta para te ajudar a encontrar o produto perfeito para o seu bebê. Atendimento rápido e personalizado pelo WhatsApp!</p>
+    <a href="#" class="btn-wa-cta reveal reveal-delay-3" id="ctaWaBtn">
+      <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.555 4.126 1.524 5.859L.057 23.571l5.886-1.462A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 0 1-5.003-1.368l-.36-.214-3.713.973.992-3.623-.235-.373A9.79 9.79 0 0 1 2.182 12C2.182 6.573 6.573 2.182 12 2.182c5.426 0 9.818 4.391 9.818 9.818 0 5.426-4.392 9.818-9.818 9.818z"/></svg>
+      Chamar no WhatsApp Agora
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a class="logo" href="#home">
+        <div class="logo-icon">👶</div>
+        <div class="logo-text">
+          <span class="logo-via">Loja</span>
+          <span class="logo-bebe">Via Bebê</span>
+        </div>
+      </a>
+      <p class="footer-desc">A loja infantil mais completa de Planaltina – DF. Tudo para o seu bebê com qualidade, carinho e o melhor preço.</p>
+      <a href="#" class="footer-wa-btn" id="footerWaBtn">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.555 4.126 1.524 5.859L.057 23.571l5.886-1.462A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 0 1-5.003-1.368l-.36-.214-3.713.973.992-3.623-.235-.373A9.79 9.79 0 0 1 2.182 12C2.182 6.573 6.573 2.182 12 2.182c5.426 0 9.818 4.391 9.818 9.818 0 5.426-4.392 9.818-9.818 9.818z"/></svg>
+        Falar no WhatsApp
+      </a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Navegação</div>
+      <a href="#home">Início</a>
+      <a href="#categorias">Categorias</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#novidades">Novidades</a>
+      <a href="#mais-vendidos">Mais Vendidos</a>
+      <a href="#sobre">Sobre nós</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Categorias</div>
+      <a href="#">🍼 Enxoval</a>
+      <a href="#">👗 Roupinhas</a>
+      <a href="#">🍶 Mamadeiras</a>
+      <a href="#">🛒 Carrinhos</a>
+      <a href="#">🧸 Brinquedos</a>
+      <a href="#">🛁 Banho & Higiene</a>
+      <a href="#">💼 Acessórios</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Informações</div>
+      <p>📍 Planaltina – DF, Brasil</p>
+      <p>🕐 Seg–Sáb: 8h às 18h</p>
+      <p>📱 Atendimento WhatsApp</p>
+      <p style="margin-top: 12px; font-size: 12px; color: rgba(255,255,255,0.3);">loja de bebê Planaltina DF • enxoval de bebê Planaltina • roupas infantis Planaltina DF</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Via Bebê – Todos os direitos reservados.</span>
+    <span>Planaltina – Distrito Federal, Brasil</span>
+  </div>
+</footer>
+
+<!-- FLOATING WA BUTTON -->
+<a href="#" class="floating-wa" id="floatingWa" aria-label="Chamar no WhatsApp">
+  <div class="floating-wa-pulse"></div>
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.555 4.126 1.524 5.859L.057 23.571l5.886-1.462A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 0 1-5.003-1.368l-.36-.214-3.713.973.992-3.623-.235-.373A9.79 9.79 0 0 1 2.182 12C2.182 6.573 6.573 2.182 12 2.182c5.426 0 9.818 4.391 9.818 9.818 0 5.426-4.392 9.818-9.818 9.818z"/></svg>
+</a>
+
+<!-- PRODUCT MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal-content" id="modalContent">
+    <div class="modal-handle"></div>
+    <button class="modal-close" onclick="closeModalBtn()">✕</button>
+    <span class="modal-emoji" id="modalEmoji"></span>
+    <div class="modal-cat" id="modalCat"></div>
+    <div class="modal-name" id="modalName"></div>
+    <div class="modal-desc" id="modalDesc"></div>
+    <div class="modal-price-row">
+      <span class="modal-price" id="modalPrice"></span>
+      <span class="modal-price-old" id="modalPriceOld"></span>
+    </div>
+    <a href="#" class="btn-wa-modal" id="modalWaBtn">
+      <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.555 4.126 1.524 5.859L.057 23.571l5.886-1.462A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 0 1-5.003-1.368l-.36-.214-3.713.973.992-3.623-.235-.373A9.79 9.79 0 0 1 2.182 12C2.182 6.573 6.573 2.182 12 2.182c5.426 0 9.818 4.391 9.818 9.818 0 5.426-4.392 9.818-9.818 9.818z"/></svg>
+      Tenho interesse neste produto!
+    </a>
+  </div>
+</div>
+
+<script>
+// ── CONFIG ── (fácil de alterar)
+const WHATSAPP_NUMBER = '5561999999999'; // ← ALTERE AQUI o número da loja
+
+function buildWaLink(productName) {
+  const msg = productName
+    ? `Olá! Vi o produto *${productName}* no site da Via Bebê e gostaria de mais informações. 😊`
+    : `Olá! Gostaria de mais informações sobre os produtos da Via Bebê. 😊`;
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+}
+
+// ── PRODUCTS DATA ──
+const products = [
+  { id:1, name:'Kit Saída Maternidade Rosa', cat:'Enxoval', emoji:'👶', price:'R$ 189,90', priceOld:'R$ 239,90', badge:'Promoção', badgeType:'promo', desc:'Kit completo com manta, touca, luva e sapatinho bordados. Material 100% algodão.', novo:false, maisVendido:true },
+  { id:2, name:'Kit Saída Maternidade Azul', cat:'Enxoval', emoji:'🍼', price:'R$ 189,90', priceOld:'', badge:'Novo', badgeType:'novo', desc:'Kit completo em azul bebê com manta, touca, luva e sapatinho. Algodão premium.', novo:true, maisVendido:true },
+  { id:3, name:'Mamadeira Anti-Cólica Premium', cat:'Mamadeiras', emoji:'🍶', price:'R$ 69,90', priceOld:'R$ 89,90', badge:'Promoção', badgeType:'promo', desc:'Bico anatômico que simula o aleitamento natural. Livre de BPA. Disponível em vários tamanhos.', novo:false, maisVendido:true },
+  { id:4, name:'Carrinho Travel System 3 em 1', cat:'Carrinhos', emoji:'🛒', price:'R$ 1.299,90', priceOld:'R$ 1.599,90', badge:'Promoção', badgeType:'promo', desc:'Carrinho reversível com moisés, bebê conforto e base. Ideal do nascimento até 15kg.', novo:false, maisVendido:false },
+  { id:5, name:'Pelúcia Urso Musical', cat:'Brinquedos', emoji:'🧸', price:'R$ 89,90', priceOld:'', badge:'Novo', badgeType:'novo', desc:'Urso de pelúcia macia com sons relaxantes para auxiliar no sono do bebê.', novo:true, maisVendido:false },
+  { id:6, name:'Body Manga Longa Floral', cat:'Roupinhas', emoji:'👗', price:'R$ 39,90', priceOld:'R$ 54,90', badge:'Promoção', badgeType:'promo', desc:'Body unissex com estampa floral delicada. Suapel macio e antialérgico. Tamanhos RN ao G.', novo:false, maisVendido:true },
+  { id:7, name:'Kit Higiene 7 Peças Rosa', cat:'Higiene', emoji:'🧴', price:'R$ 129,90', priceOld:'', badge:'', badgeType:'', desc:'Kit completo com termômetro, cortador de unhas, pente, escova e mais. Embalagem presente.', novo:false, maisVendido:false },
+  { id:8, name:'Banheira Dobrável com Suporte', cat:'Banho', emoji:'🛁', price:'R$ 219,90', priceOld:'R$ 269,90', badge:'Promoção', badgeType:'promo', desc:'Banheira anatômica com suporte de aço inox. Dobrável para facilitar o armazenamento.', novo:false, maisVendido:false },
+  { id:9, name:'Bolsa Maternidade Grande', cat:'Acessórios', emoji:'💼', price:'R$ 159,90', priceOld:'', badge:'Novo', badgeType:'novo', desc:'Bolsa espaçosa com trocador incluso. 10 bolsos internos e externos. Material impermeável.', novo:true, maisVendido:false },
+  { id:10, name:'Roupinha Jardim de Primavera', cat:'Roupinhas', emoji:'🌸', price:'R$ 49,90', priceOld:'R$ 69,90', badge:'Promoção', badgeType:'promo', desc:'Conjunto 3 peças (body, calça e tiara) com estampa floral. Suapel premium.', novo:false, maisVendido:false },
+  { id:11, name:'Kit Mamadeiras 3 Unidades', cat:'Mamadeiras', emoji:'🍼', price:'R$ 129,90', priceOld:'R$ 159,90', badge:'Promoção', badgeType:'promo', desc:'Kit com mamadeiras de 150ml, 250ml e 330ml anti-cólica. Livre de BPA.', novo:false, maisVendido:true },
+  { id:12, name:'Moisés Portátil Listras', cat:'Enxoval', emoji:'🌙', price:'R$ 299,90', priceOld:'', badge:'Novo', badgeType:'novo', desc:'Moisés com alças para transporte, fácil de montar. Acompanha colchonete removível.', novo:true, maisVendido:false },
+  { id:13, name:'Conjunto Pijama Estrelinhas', cat:'Roupinhas', emoji:'⭐', price:'R$ 59,90', priceOld:'', badge:'', badgeType:'', desc:'Pijama macio para noitinhas confortáveis. Estampa de estrelinhas. Tamanhos 0-3M ao 2 anos.', novo:false, maisVendido:false },
+  { id:14, name:'Andador Musical Colorido', cat:'Brinquedos', emoji:'🎵', price:'R$ 199,90', priceOld:'R$ 249,90', badge:'Promoção', badgeType:'promo', desc:'Andador musical com 10 melodias e sons animais. Altura ajustável. A partir de 9 meses.', novo:false, maisVendido:false },
+  { id:15, name:'Kit Banho 5 Peças Azul', cat:'Banho', emoji:'🛁', price:'R$ 99,90', priceOld:'', badge:'Novo', badgeType:'novo', desc:'Kit completo com toalha com capuz, esponja, termômetro e mais. Perfeito para presentes.', novo:true, maisVendido:false },
+  { id:16, name:'Chupeta Ortodôntica Dupla', cat:'Acessórios', emoji:'😊', price:'R$ 34,90', priceOld:'R$ 44,90', badge:'Promoção', badgeType:'promo', desc:'Par de chupetas ortodônticas BPA free. Protetor facial amplo. Para bebês de 0-6 meses.', novo:false, maisVendido:true },
+];
+
+const categories = [
+  { name:'Enxoval', emoji:'🍼', count: products.filter(p=>p.cat==='Enxoval').length },
+  { name:'Roupinhas', emoji:'👗', count: products.filter(p=>p.cat==='Roupinhas').length },
+  { name:'Mamadeiras', emoji:'🍶', count: products.filter(p=>p.cat==='Mamadeiras').length },
+  { name:'Carrinhos', emoji:'🛒', count: products.filter(p=>p.cat==='Carrinhos').length },
+  { name:'Brinquedos', emoji:'🧸', count: products.filter(p=>p.cat==='Brinquedos').length },
+  { name:'Banho', emoji:'🛁', count: products.filter(p=>p.cat==='Banho').length },
+  { name:'Higiene', emoji:'🧴', count: products.filter(p=>p.cat==='Higiene').length },
+  { name:'Acessórios', emoji:'💼', count: products.filter(p=>p.cat==='Acessórios').length },
+];
+
+let activeFilter = 'Todos';
+
+// ── RENDER CATEGORIES ──
+function renderCategories() {
+  const grid = document.getElementById('categoriesGrid');
+  grid.innerHTML = categories.map(cat => `
+    <a class="cat-card reveal" href="#produtos" onclick="filterByCategory('${cat.name}')">
+      <span class="cat-icon">${cat.emoji}</span>
+      <div class="cat-name">${cat.name}</div>
+      <div class="cat-count">${cat.count} produtos</div>
+    </a>
+  `).join('');
+  observeReveal();
+}
+
+// ── RENDER FILTER BAR ──
+function renderFilterBar() {
+  const bar = document.getElementById('filterBar');
+  const cats = ['Todos', ...categories.map(c=>c.name)];
+  bar.innerHTML = cats.map(cat => `
+    <button class="filter-btn ${cat === activeFilter ? 'active' : ''}" onclick="filterByCategory('${cat}')">${cat}</button>
+  `).join('');
+}
+
+// ── RENDER PRODUCTS ──
+function renderProducts(filter) {
+  const grid = document.getElementById('productsGrid');
+  const filtered = filter && filter !== 'Todos'
+    ? products.filter(p => p.cat === filter)
+    : products;
+
+  grid.innerHTML = filtered.map(p => `
+    <div class="product-card reveal" onclick="openModal(${p.id})">
+      ${p.badge ? `<div class="product-badge ${p.badgeType}">${p.badge}</div>` : ''}
+      <div class="product-img-wrap">${p.emoji}</div>
+      <div class="product-info">
+        <div class="product-cat">${p.cat}</div>
+        <div class="product-name">${p.name}</div>
+        <div class="product-desc">${p.desc}</div>
+        <div class="product-price-row">
+          <span class="product-price">${p.price}</span>
+          ${p.priceOld ? `<span class="product-price-old">${p.priceOld}</span>` : ''}
+        </div>
+        <a href="${buildWaLink(p.name)}" class="btn-wa-card" target="_blank" onclick="event.stopPropagation()">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.555 4.126 1.524 5.859L.057 23.571l5.886-1.462A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 0 1-5.003-1.368l-.36-.214-3.713.973.992-3.623-.235-.373A9.79 9.79 0 0 1 2.182 12C2.182 6.573 6.573 2.182 12 2.182c5.426 0 9.818 4.391 9.818 9.818 0 5.426-4.392 9.818-9.818 9.818z"/></svg>
+          Chamar no WhatsApp
+        </a>
+      </div>
+    </div>
+  `).join('');
+  observeReveal();
+}
+
+// ── RENDER NOVIDADES ──
+function renderNovidades() {
+  const scroll = document.getElementById('novidadesScroll');
+  const novas = products.filter(p => p.novo);
+  scroll.innerHTML = novas.map(p => `
+    <div class="novidade-card" onclick="openModal(${p.id})">
+      <div class="novidade-img">${p.emoji}</div>
+      <div class="novidade-info">
+        <div class="novidade-name">${p.name}</div>
+        <div class="novidade-price">${p.price}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ── RENDER MAIS VENDIDOS ──
+function renderMaisVendidos() {
+  const grid = document.getElementById('maisVendidosGrid');
+  const mvs = products.filter(p => p.maisVendido);
+  grid.innerHTML = mvs.map((p, i) => `
+    <div class="mv-card reveal reveal-delay-${i % 4}" onclick="openModal(${p.id})">
+      <div class="mv-rank">${i+1}</div>
+      <div class="mv-img">${p.emoji}</div>
+      <div class="mv-info">
+        <div class="mv-name">${p.name}</div>
+        <div class="mv-price">${p.price}</div>
+      </div>
+    </div>
+  `).join('');
+  observeReveal();
+}
+
+// ── FILTER ──
+function filterByCategory(cat) {
+  activeFilter = cat;
+  renderFilterBar();
+  renderProducts(cat);
+}
+
+// ── MODAL ──
+function openModal(id) {
+  const p = products.find(x => x.id === id);
+  if (!p) return;
+  document.getElementById('modalEmoji').textContent = p.emoji;
+  document.getElementById('modalCat').textContent = p.cat;
+  document.getElementById('modalName').textContent = p.name;
+  document.getElementById('modalDesc').textContent = p.desc;
+  document.getElementById('modalPrice').textContent = p.price;
+  document.getElementById('modalPriceOld').textContent = p.priceOld || '';
+  document.getElementById('modalWaBtn').href = buildWaLink(p.name);
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(e) {
+  if (e.target === document.getElementById('modalOverlay')) {
+    closeModalBtn();
+  }
+}
+function closeModalBtn() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// ── SEARCH ──
+function renderSearchResults(query, inputEl, dropdownEl) {
+  if (!query || query.length < 2) { dropdownEl.classList.remove('active'); return; }
+  const results = products.filter(p => p.name.toLowerCase().includes(query.toLowerCase()) || p.cat.toLowerCase().includes(query.toLowerCase()));
+  if (!results.length) { dropdownEl.innerHTML = '<div class="search-result-item"><div class="search-result-name">Nenhum produto encontrado</div></div>'; dropdownEl.classList.add('active'); return; }
+  dropdownEl.innerHTML = results.slice(0, 6).map(p => `
+    <div class="search-result-item" onclick="openModal(${p.id}); document.getElementById('${inputEl.id}').value=''; document.getElementById('${dropdownEl.id}').classList.remove('active');">
+      <div class="search-result-img">${p.emoji}</div>
+      <div>
+        <div class="search-result-name">${p.name}</div>
+        <div class="search-result-price">${p.price}</div>
+      </div>
+    </div>
+  `).join('');
+  dropdownEl.classList.add('active');
+}
+
+// ── WHATSAPP LINKS ──
+function setAllWaLinks() {
+  const generalLink = buildWaLink('');
+  const ids = ['headerWaBtn','heroWaBtn','ctaWaBtn','footerWaBtn','floatingWa','mobileMenuWa'];
+  ids.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.href = generalLink;
+  });
+}
+
+// ── SCROLL REVEAL ──
+function observeReveal() {
+  const els = document.querySelectorAll('.reveal:not(.visible)');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  els.forEach(el => obs.observe(el));
+}
+
+// ── HEADER SCROLL ──
+window.addEventListener('scroll', () => {
+  document.getElementById('header').classList.toggle('scrolled', window.scrollY > 20);
+});
+
+// ── HAMBURGER ──
+document.getElementById('hamburger').addEventListener('click', () => {
+  const hb = document.getElementById('hamburger');
+  const mm = document.getElementById('mobileMenu');
+  hb.classList.toggle('open');
+  mm.classList.toggle('open');
+  document.body.style.overflow = mm.classList.contains('open') ? 'hidden' : '';
+});
+function closeMobileMenu() {
+  document.getElementById('hamburger').classList.remove('open');
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// ── SEARCH SETUP ──
+function setupSearch() {
+  // Desktop (only show if viewport wide enough)
+  const sw = document.getElementById('searchWrapDesktop');
+  if (window.innerWidth >= 641) sw.style.display = 'block';
+
+  const inp = document.getElementById('searchInputDesktop');
+  const drop = document.getElementById('searchDropdownDesktop');
+  inp.addEventListener('input', () => renderSearchResults(inp.value, inp, drop));
+  document.addEventListener('click', e => { if (!sw.contains(e.target)) drop.classList.remove('active'); });
+}
+
+// ── INIT ──
+document.addEventListener('DOMContentLoaded', () => {
+  renderCategories();
+  renderFilterBar();
+  renderProducts('Todos');
+  renderNovidades();
+  renderMaisVendidos();
+  setAllWaLinks();
+  observeReveal();
+  setupSearch();
+
+  // Trigger initial reveals
+  setTimeout(observeReveal, 100);
+});
+</script>
+</body>
+</html>
